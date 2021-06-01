@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="./node_modules/html5-qrcode/minified/html5-qrcode.min.js" >
+    function onScanSuccess(qrMessage) {
+    // handle the scanned code as you like, for example:
+    console.log(`QR matched = ${qrMessage}`);
+  }
+
+  function onScanFailure(error) {
+    // handle scan failure, usually better to ignore and keep scanning.
+    // for example:
+    console.warn(`QR error = ${error}`);
+  }
+
+  let html5QrcodeScanner = new Html5QrcodeScanner(
+    "reader", { fps: 10, qrbox: 250 }, /* verbose= */ false);
+  html5QrcodeScanner.render(onScanSuccess, onScanFailure);
+</script>
+    <title>Doctor's Profile</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <center>
+      <br /><br />
+      <h1>MEDICAL RECORD SYSTEM</h1>
+      <hr size="3" noshade ==$0 />
+      <h5>Your one-stop solution to medical record keeping</h5>
+      <hr size="3" noshade ==$0 />
+      <img src="" alt="cannot be displayed">
+      <h2>Doctors Name</h2>
+      <p>
+        contents of doctor identity............................
+        .....................
+        ........................
+        </p>
+      <form class="" action="updateprofiledoctor.html" method="get">
+        <label for=""> Update Profile:</label>
+       <input type="submit" name="" ></form>
+
+    <br /><br /><br /><hr size="3" noshade ==$0 />
+
+   <form >
+   <input type="button" onclick=onScanSuccess() value="open">
+
+      </form>
+      <div id="reader" width="600px"></div>
+
+<br /><br /><br /><br />
+<button class= topright1><a href="doctorlogin.html" alt="Image not loading"><h3> LOGOUT  </h3></a> </td></button></td>
+
+      </center>
+  </body>
+</html>
